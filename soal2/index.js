@@ -5,10 +5,10 @@ const connectDB = require('./config/db');
 const app = express();
 app.use(express.json());
 
-// Connect ke Mongo
+
 connectDB();
 
-// Routes
+
 app.use('/pengguna', require('./routes/penggunaRoutes'));
 
 const PORT = process.env.PORT || 3000;
